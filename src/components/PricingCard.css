@@ -1,0 +1,100 @@
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-ink-16);
+  background: var(--color-canvas);
+  padding: clamp(1.75rem, 3vw, 2.25rem);
+  transition: border-color var(--dur-md) var(--ease-brand), box-shadow var(--dur-md) var(--ease-brand);
+}
+
+.pricing-card.is-highlight {
+  border-color: var(--color-ink);
+}
+
+.pricing-card.is-selected {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.pricing-card__badge {
+  position: absolute;
+  top: -13px;
+  left: clamp(1.75rem, 3vw, 2.25rem);
+  background: var(--color-ink);
+  color: var(--color-canvas);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+}
+
+.pricing-card__best-for {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.6rem;
+}
+
+.pricing-card__name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.pricing-card__tagline {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-ink-70);
+  min-height: 3em;
+}
+
+.pricing-card__price-row {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.pricing-card__price {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.1rem);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.pricing-card__price-note {
+  font-size: 0.85rem;
+  color: var(--color-ink-40);
+  margin-top: 0.25rem;
+}
+
+.pricing-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 1.75rem 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-ink-08);
+  flex: 1;
+}
+
+.pricing-card__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--color-ink-90);
+}
+
+.pricing-card__tick {
+  color: var(--color-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}

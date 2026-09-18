@@ -1,0 +1,56 @@
+.pricing-hero {
+  padding-top: clamp(3rem, 9vw, 6rem);
+}
+
+.pricing-hero__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.pricing-hero__title {
+  margin-top: 0.5rem;
+  max-width: 900px;
+}
+
+.pricing-hero__lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 500;
+  color: var(--color-ink-90);
+  max-width: 700px;
+}
+
+.pricing-hero__sub {
+  max-width: 560px;
+}
+
+.pricing-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 960px) {
+  .pricing-hero__row {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+
+  .pricing-hero__inner {
+    flex: 1 1 56%;
+  }
+
+  .hero-graphic {
+    flex: 1 1 40%;
+    max-width: 400px;
+  }
+}

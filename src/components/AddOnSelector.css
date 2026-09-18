@@ -1,0 +1,131 @@
+.addon-section {
+  background: var(--color-ink-08);
+  padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.addon-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.addon-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: var(--color-canvas);
+  border: 1px solid var(--color-ink-16);
+  padding: 1.25rem 1.4rem;
+  cursor: pointer;
+  transition: border-color var(--dur-md) var(--ease-brand);
+}
+
+.addon-card:hover {
+  border-color: var(--color-ink-40);
+}
+
+.addon-card.is-checked {
+  border-color: var(--color-accent);
+}
+
+.addon-card input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.addon-card__box {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--color-ink-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-canvas);
+  margin-top: 0.15rem;
+}
+
+.addon-card.is-checked .addon-card__box {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.addon-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.addon-card__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.addon-card__name {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--color-ink);
+}
+
+.addon-card__quote-tag {
+  flex-shrink: 0;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 0.2em 0.55em;
+  border-radius: 999px;
+}
+
+.addon-card__desc {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--color-ink-70);
+}
+
+.addon-section__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: clamp(2rem, 5vw, 2.75rem);
+}
+
+.addon-section__clear {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-ink-70);
+  text-decoration: underline;
+  margin-right: auto;
+}
+
+.addon-section__locked {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  background: var(--color-canvas);
+  border: 1px dashed var(--color-ink-16);
+  padding: clamp(2rem, 5vw, 2.75rem);
+}
+
+@media (min-width: 720px) {
+  .addon-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .addon-section__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

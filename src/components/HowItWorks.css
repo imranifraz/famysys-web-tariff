@@ -1,0 +1,101 @@
+.how-it-works__steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.how-it-works__step {
+  position: relative;
+  border: 1px solid var(--color-ink-16);
+  padding: 1.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s var(--ease-brand), transform 0.5s var(--ease-brand);
+  transition-delay: calc(var(--i) * 80ms);
+}
+
+.how-it-works__steps.is-in .how-it-works__step {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.how-it-works__step.is-highlight {
+  border-color: var(--color-accent);
+  background: var(--color-ink-08);
+}
+
+.how-it-works__badge {
+  position: absolute;
+  top: -11px;
+  right: 1.2rem;
+  background: var(--color-accent);
+  color: var(--color-canvas);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+}
+
+.how-it-works__num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-ink-16);
+}
+
+.how-it-works__step.is-highlight .how-it-works__num {
+  color: var(--color-accent);
+}
+
+.how-it-works__step h3 {
+  font-size: 1.05rem;
+}
+
+.how-it-works__step p {
+  font-size: 0.88rem;
+  color: var(--color-ink-70);
+}
+
+.how-it-works__notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid var(--color-ink-16);
+  background: var(--color-ink-08);
+  padding: 1.25rem clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.how-it-works__notes p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-ink-70);
+}
+
+.how-it-works__notes strong {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .how-it-works__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .how-it-works__steps {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .how-it-works__step {
+    opacity: 1;
+    transform: none;
+  }
+}

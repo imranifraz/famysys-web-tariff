@@ -1,0 +1,13 @@
+.faq-category {
+  padding: clamp(2rem, 5vw, 3rem) 0;
+  border-top: 1px solid var(--color-ink-08);
+  scroll-margin-top: calc(var(--nav-h) + 1rem);
+}
+
+.faq-category:first-child {
+  border-top: none;
+}
+
+.faq-category__title {
+  margin-bottom: 0.5rem;
+}

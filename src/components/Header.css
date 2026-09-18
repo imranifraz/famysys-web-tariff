@@ -1,0 +1,135 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-canvas-80);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-md) var(--ease-brand);
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-ink-08);
+}
+
+.site-header__row {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  color: var(--color-ink);
+  flex-shrink: 0;
+}
+
+.site-header__mark {
+  height: clamp(1.5rem, 2vw, 1.85rem);
+  width: auto;
+}
+
+.site-header__nav {
+  display: none;
+  align-items: center;
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-right: auto;
+  margin-left: clamp(2rem, 4vw, 4rem);
+}
+
+.site-header__link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-ink-70);
+  transition: color var(--dur-md) var(--ease-brand);
+  white-space: nowrap;
+}
+
+.site-header__link:hover,
+.site-header__link.active {
+  color: var(--color-ink);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-header__cta {
+  display: none;
+}
+
+.site-header__burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.site-header__burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-ink);
+}
+
+.site-header__panel {
+  position: fixed;
+  top: var(--nav-h);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: calc(100vh - var(--nav-h));
+  height: calc(100dvh - var(--nav-h));
+  background: var(--color-canvas);
+  z-index: 49;
+  padding: clamp(1.5rem, 6vw, 3rem) var(--shell-pad) clamp(2rem, 6vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.site-header__panel-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header__panel-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--color-ink-08);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.site-header__panel-index {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-ink-40);
+}
+
+@media (min-width: 900px) {
+  .site-header__nav {
+    display: flex;
+  }
+  .site-header__cta {
+    display: inline-flex;
+  }
+  .site-header__burger {
+    display: none;
+  }
+}

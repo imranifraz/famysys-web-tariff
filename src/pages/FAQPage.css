@@ -1,0 +1,32 @@
+.faq-hero__inner {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.faq-hero__inner .display-xl {
+  margin-top: 0.5rem;
+}
+
+.faq-hero__inner .faq-category-nav {
+  margin-top: 0.75rem;
+}
+
+.faq-list {
+  padding-top: 0;
+}
+
+.faq-list__inner {
+  max-width: 820px;
+}
+
+.faq-list__more {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  border-top: 1px solid var(--color-ink-08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}

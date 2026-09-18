@@ -1,0 +1,43 @@
+.pricing-section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: clamp(2rem, 5vw, 3.25rem);
+}
+
+.pricing-section__head .section-head {
+  margin-bottom: 0;
+}
+
+.pricing-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.pricing-section__compare {
+  margin-top: 1.5rem;
+}
+
+.pricing-section__note {
+  margin-top: 1.25rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--color-ink-40);
+  max-width: 640px;
+}
+
+@media (min-width: 640px) {
+  .pricing-section__head {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 860px) {
+  .pricing-section__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

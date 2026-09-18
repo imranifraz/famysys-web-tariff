@@ -1,0 +1,119 @@
+.site-footer {
+  background: var(--color-canvas);
+  border-top: 1px solid var(--color-ink-08);
+  padding-top: clamp(3rem, 7vw, 5rem);
+}
+
+.site-footer__top {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+  grid-template-columns: 1fr;
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.site-footer__mark {
+  height: clamp(1.6rem, 2.2vw, 2rem);
+  width: auto;
+  color: var(--color-ink);
+}
+
+.site-footer__address {
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-ink-70);
+}
+
+.site-footer__email {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.site-footer__email:hover {
+  color: var(--color-accent);
+}
+
+.site-footer__deck {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--color-ink-16);
+  padding: 0.9rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-ink);
+  margin-top: 0.4rem;
+  transition: border-color var(--dur-md) var(--ease-brand), background var(--dur-md) var(--ease-brand);
+}
+
+.site-footer__deck:hover {
+  border-color: var(--color-ink);
+  background: var(--color-ink-08);
+}
+
+.site-footer__columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.site-footer__col-title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-40);
+  margin-bottom: 1.1rem;
+}
+
+.site-footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.site-footer__col a {
+  font-size: 0.98rem;
+  color: var(--color-ink-70);
+  transition: color var(--dur-md) var(--ease-brand);
+}
+
+.site-footer__col a:hover {
+  color: var(--color-ink);
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1.75rem;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-40);
+}
+
+@media (min-width: 720px) {
+  .site-footer__top {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer__columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2rem;
+  }
+}
